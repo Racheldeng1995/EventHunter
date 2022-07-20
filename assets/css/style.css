@@ -1,0 +1,67 @@
+:root {
+    --primary: #F07F30;
+    --footer-background: #d3d3d3;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+header {
+    display: flex;
+}
+
+.application-name {
+    color: var(--primary) ;
+    padding: 0px 20px;
+    width: 80% ;
+}
+
+.application-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    width: 20%;
+    color: var(--primary);
+}
+
+.back-btn {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: .3rem;
+    font-size: 1em;
+    font-weight: bold;
+    border: 0px;
+    cursor: pointer;
+}
+
+.like-btn {
+    background:none; 
+    border:none;
+    padding: 5px 5px;
+    font-size: 1em;
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px ;
+    background-color: var(--footer-background);
+    color: #808080;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+footer a {
+    color: #808080;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
