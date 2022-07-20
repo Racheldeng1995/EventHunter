@@ -18,6 +18,11 @@ header {
     width: 80% ;
 }
 
+.application-name a {
+    color: var(--primary) ;
+    text-decoration: none;
+}
+
 .application-action {
     display: flex;
     justify-content: space-between;
@@ -37,6 +42,11 @@ header {
     font-weight: bold;
     border: 0px;
     cursor: pointer;
+}
+
+.back-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 .like-btn {
