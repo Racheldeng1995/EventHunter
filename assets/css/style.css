@@ -124,6 +124,18 @@ header {
     font-weight: bold;
 }
 
+.event-main-saved {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-block {
+    text-align: center;
+    padding: 5px 5px; 
+    width: 33%;
+}
+
 footer ul {
     display: flex;
     justify-content: space-between;
@@ -133,6 +145,7 @@ footer ul {
     font-weight: bold;
     font-size: 1em;
 }
+
 
 footer a {
     color: #808080;
