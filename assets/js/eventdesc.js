@@ -18,7 +18,7 @@ var backBtnText = document.getElementById("back-btn-text")
 var getEventDetails = function() {
     
     //var event = getEventDetails()
-    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + "345788401417"   + "/?token=" + APIToken
+    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697"   + "/?token=" + APIToken
 
     return fetch (eventApiUrl)
     .then (function (response) {
@@ -83,7 +83,7 @@ var getLocationGeo = function() {
 var getTicketPrice = function() {
     
     //var event = getEventDetails()
-    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + "345788401417/" + "ticket_classes"   + "/?token=" + APIToken
+    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697/" + "ticket_classes"   + "/?token=" + APIToken
 
     return fetch (priceApiUrl)
     .then (function (response) {
@@ -135,7 +135,7 @@ var getTicketPrice = function() {
 var getFullDesc = function() {
     
     //var event = getEventDetails()
-    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + "345788401417/" + "structured_content"   + "/?token=" + APIToken
+    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697/" + "structured_content"   + "/?token=" + APIToken
 
     return fetch (descApiUrl)
     .then (function (response) {
@@ -275,17 +275,20 @@ genPage = function () {
 genPage()
 
 
-savedEventArray = []
+var savedEventArray = []
 
 // Add event listener on Like button
 // If click "Like", heart icon turns into solid color, and button text turns into "Liked"
 // If click again, heart icon turns back to default color(transparent with border), and button text turns back to default text("Like")
 likeBtn.addEventListener("click", function(event){
 
+    var savedList = null 
     event.preventDefault();
     var likeIcon = document.getElementById("like-icon")
     var likeValue = likeBtn.getAttribute("like-value")
-    var savedList = JSON.parse(localStorage.getItem("savedlist"))
+    console.log(JSON.parse(localStorage.getItem("savedlist")))
+    savedList = JSON.parse(localStorage.getItem("savedlist"))
+    console.log(savedList)
 
     if (likeValue == "like") {
         likeIcon.className = "fa fa-heart"
@@ -294,15 +297,20 @@ likeBtn.addEventListener("click", function(event){
 
         return comDetails()
         .then(function(eventDetailsArray) {
-            if (savedList == null || savedList.length == 0) {
+            console.log(savedList)
+            if (savedList == null) {
                 console.log(eventDetailsArray)
+                console.log(savedEventArray)
                 savedEventArray.push(eventDetailsArray)
+                console.log(savedEventArray)
                 localStorage.setItem("savedlist", JSON.stringify(savedEventArray))
             }
             else {
                 console.log(eventDetailsArray)
-                var newsavedlist = savedList.push(eventDetailsArray)
-                localStorage.setItem("savedlist", JSON.stringify(newsavedlist))
+                console.log(savedList)
+                savedList.push(eventDetailsArray)
+                console.log(savedList)
+                localStorage.setItem("savedlist", JSON.stringify(savedList))
             }
             }
         )
@@ -315,12 +323,14 @@ likeBtn.addEventListener("click", function(event){
 
         return comDetails()
         .then(function(eventDetailsArray) {
-            if (savedList == null) {
+            if (savedList == null || savedList.length == 0) {
+                console.log(eventDetailsArray.event_id)
                 return
             }
             else {
-                var newsaved = savedList.filter(data => data.id != eventDetailsArray.id);
-                localStorage.setItem("savedlist", JSON.stringify(newsaved))
+                var newlist = savedList.filter(data => data.event_id != eventDetailsArray.event_id);
+                console.log(eventDetailsArray.event_id)
+                localStorage.setItem("savedlist", JSON.stringify(newlist))
             }
             }
         )
