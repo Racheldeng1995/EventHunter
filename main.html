@@ -14,35 +14,61 @@
     <nav class="navbar">
        
         <ul>
-            <li> <h1 class="application-name"> <a href="./main.html">Event Hunter </a></h1></li>
+        <li> 
+            <h1 class="application-name"> 
+                <a href="./main.html">Event Hunter </a>
+            </h1>
+        </li>
         <!--when like button clicked  number of click number increase-->
-       <li> <h3 class="likeMtrC"><a id="event-like-page" href="savedlist.html">Events you liked<span class="span">:</span></a><div id="likeMtr" class="likeMtrC-number">0</div> </h3></li>
+       <li> 
+        <h3 class="likeMtrC">
+            <a id="event-like-page" href="savedlist.html">
+                Events you liked<span class="span">:</span></a><div id="likeMtr" class="likeMtrC-number">0</div> 
+        </h3>
+       </li>
         <!--Create appendChild and display amountof event--><!--Chosed datas length display-->
-        <li> <h3 class="eventN">Event Number<span class="span">:</span> <div id="nmbr-event" class="eventN-n">0</div></h3></li>
+        <li>
+             <h3 class="eventN">Event Number<span class="span">:</span> <div id="nmbr-event" class="eventN-n">0</div>
+            </h3>
+        </li>
         <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
-        <li> <h3 class="time-rng" >Time Range<span class="span">:</span> <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date"></h3></li>
-        <!--https://www.w3schools.com/howto/howto_js_filter_lists.asp-->
-        <li><h3 class="city">City<span class="span">:</span><input id="user-input" type="search" placeholder="Search For Locations"></h3></li>
+        <li> 
+            <h3 class="time-rng" >Time Range<span class="span">:</span> <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date">
+            </h3>
+        </li>
+        <!--Selevt Bar MJ-->
+        <li>
+            <h3><label for="city-names">Choose a location:</label>
+               
+        <select name="city-names" id="city-names">
+            <option class="city-color" value="new-york">New York</option>
+            <option class="city-color" value="miami">Miami</option>
+            <option  class="city-color"value="boston">Boston</option>
+            <option  class="city-color"value="washington">Washington</option>
+          </select>
+
+            </h3>
+        </li>
     </ul>
 </header>
 
     </nav>
 
-    <!--Example comments keep it pls mj-->
+    <!--Example comments keep it pls MJ-->
     <main class="main-container">
-        <div class="event-container">
-            <div class="event-title">
-               <h3>test1 title</h3>
+        <div id="event-container">
+            <div id="event-title">
+               <h3 id="event-title-h3" class="event-inf">title</h3>
             </div>
-            <div class="event-img">
-                <img id="event-img-pic" >
-                <p>test image</p>
+            <div id="event-img" style="width:100%" >
+                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
+                
             </div>
-            <div class="event-location">
-               <h5>test location</h5>
+            <div id="event-location">
+               <h4 id="location" class="event-inf">test location</h4>
             </div>
-            <div class="event-date">
-                <h5>test date</h5>
+            <div id="event-date">
+                <h4 id="date" class="event-inf">test date</h4>
 
             </div>
 
