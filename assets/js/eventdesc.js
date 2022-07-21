@@ -1,4 +1,5 @@
 var APIToken = "ZK55TMREDURZKUJDZZ64"
+var googleMapAPI = "AIzaSyBuMQJedJWyxzXaIQkMRnuwXzh-W75MyWU"
 var likeBtn = document.getElementById("like-btn")
 var backBtn = document.getElementById("back-btn")
 var backBtnText = document.getElementById("back-btn-text")
@@ -15,6 +16,9 @@ var getEventId = function() {
     return eventId
 };
 
+// Generate Liked status,
+// If the page goes from saved list and then the icon and button text should be in "liked" button
+// If the pages goes from event main page, then the icon and button should be in default values "like"
 var genHeader = function () {
     var checkEvent = JSON.parse(localStorage.getItem("savedlist"))
     var likeIconEl = document.getElementById("like-icon")
@@ -44,7 +48,7 @@ genHeader();
 var eventId = getEventId()
 
 var testevent = "335539506697"
- 
+
 var getEventDetails = function() {
     
     var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent   + "/?token=" + APIToken
@@ -111,7 +115,7 @@ var getLocationGeo = function() {
 
 var getTicketPrice = function() {
     
-    //var event = getEventDetails()
+
     var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent + "/ticket_classes"   + "/?token=" + APIToken
 
     return fetch (priceApiUrl)
@@ -302,6 +306,30 @@ genPage = function () {
 }
 
 genPage()
+
+// Initialize and add the map
+function initMap() {     
+    return comDetails()
+    .then(function(eventDetailsArray) {
+        // The location of Uluru
+        const eventLoc = { lat: parseInt(eventDetailsArray.lat), lng: parseInt(eventDetailsArray.lon) };
+        
+        const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: eventLoc
+        });
+        
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: eventLoc,
+            map: map,
+        });
+        }
+    )
+}
+
+window.initMap = initMap;
+
 
 
 var savedEventArray = []

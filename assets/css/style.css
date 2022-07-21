@@ -136,17 +136,21 @@ header {
     width: 33%;
 }
 
-
+.map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
 footer ul {
-   
-   
-  display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px ;
     background-color: var(--footer-background);
     color: #808080;
     font-weight: bold;
     font-size: 1em;
 }
-
 
 footer a {
     color: #808080;
