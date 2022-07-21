@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Event Hunter</title>
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+       
+        <ul>
+            <li> <h1 class="application-name"> <a href="./main.html">Event Hunter </a></h1></li>
+        <!--when like button clicked  number of click number increase-->
+       <li> <h3 class="likeMtrC"><a id="event-like-page" href="savedlist.html">Events you liked<span class="span">:</span></a><div id="likeMtr" class="likeMtrC-number">0</div> </h3></li>
+        <!--Create appendChild and display amountof event--><!--Chosed datas length display-->
+        <li> <h3 class="eventN">Event Number<span class="span">:</span> <div id="nmbr-event" class="eventN-n">0</div></h3></li>
+        <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
+        <li> <h3 class="time-rng" >Time Range<span class="span">:</span> <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date"></h3></li>
+        <!--https://www.w3schools.com/howto/howto_js_filter_lists.asp-->
+        <li><h3 class="city">City<span class="span">:</span><input id="user-input" type="search" placeholder="Search For Locations"></h3></li>
+    </ul>
+</header>
+
+    </nav>
+
+    <!--Example comments keep it pls mj-->
+    <main class="main-container">
+        <div class="event-container">
+            <div class="event-title">
+               <h3>test1 title</h3>
+            </div>
+            <div class="event-img">
+                <img id="event-img-pic" >
+                <p>test image</p>
+            </div>
+            <div class="event-location">
+               <h5>test location</h5>
+            </div>
+            <div class="event-date">
+                <h5>test date</h5>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <!--footer you guys can Copy paste or can uptade it-->
+    <footer class="footer">
+   
+        
+        <ul class="social-media">
+            <li><h5><a href="./aboutus">About</a></h5></li>
+            <li><a href="#">Facebook | </a> <a href="#">Youtube | </a><a href="#">LinkedIn | </a> <a href="#">Instagram | </a> <a href="#">Youtube</a></li>
+            
+            <li><h5><a href="">Contact Us</a></h5></li>
+            
+        </ul>
+
+    </footer>
+
+</body>
+</html>
