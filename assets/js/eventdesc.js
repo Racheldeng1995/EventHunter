@@ -7,18 +7,47 @@ var backBtnText = document.getElementById("back-btn-text")
 // Grab evrnt id from url query string
 // !!! Dependency on href link from Event Main Page. href should be ./index.html?event=" + eventid
 
-// var getEventId = function() {
+var getEventId = function() {
 
-//     var queryString = document.location.search;
-//     var eventId = queryString.split("=")[1];
+    var queryString = document.location.search;
+    var eventId = queryString.split("=")[1];
   
-//     return eventId
-//   };
+    return eventId
+};
+
+var genHeader = function () {
+    var checkEvent = JSON.parse(localStorage.getItem("savedlist"))
+    var likeIconEl = document.getElementById("like-icon")
+    var likeBtnEl = document.getElementById("like-btn")
+    
+
+    if (checkEvent == null) {
+        return
+    }
+    else {
+        var foundEvent = checkEvent.some(el => el.event_id == getEventId());
+        if (foundEvent) {
+            likeIconEl.className = "fa fa-heart"
+            likeBtnEl.setAttribute("like-value", "liked")
+            likeBtnEl.textContent = "Liked"
+        }
+        else {
+            return
+        }
+    }
+
+
+}
+
+genHeader();
+
+var eventId = getEventId()
+
+var testevent = "335539506697"
  
 var getEventDetails = function() {
     
-    //var event = getEventDetails()
-    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697"   + "/?token=" + APIToken
+    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent   + "/?token=" + APIToken
 
     return fetch (eventApiUrl)
     .then (function (response) {
@@ -83,7 +112,7 @@ var getLocationGeo = function() {
 var getTicketPrice = function() {
     
     //var event = getEventDetails()
-    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697/" + "ticket_classes"   + "/?token=" + APIToken
+    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent + "/ticket_classes"   + "/?token=" + APIToken
 
     return fetch (priceApiUrl)
     .then (function (response) {
@@ -135,7 +164,7 @@ var getTicketPrice = function() {
 var getFullDesc = function() {
     
     //var event = getEventDetails()
-    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + "335539506697/" + "structured_content"   + "/?token=" + APIToken
+    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent + "/structured_content"   + "/?token=" + APIToken
 
     return fetch (descApiUrl)
     .then (function (response) {
