@@ -3,40 +3,6 @@ var likeBtn = document.getElementById("like-btn")
 var backBtn = document.getElementById("back-btn")
 var backBtnText = document.getElementById("back-btn-text")
 
-// Add event listener on Like button
-// If click "Like", heart icon turns into solid color, and button text turns into "Liked"
-// If click again, heart icon turns back to default color(transparent with border), and button text turns back to default text("Like")
-likeBtn.addEventListener("click", function(event){
-
-    event.preventDefault();
-    var likeIcon = document.getElementById("like-icon")
-    var likeValue = likeBtn.getAttribute("like-value")
-
-    if (likeValue == "like") {
-        likeIcon.className = "fa fa-heart"
-        this.textContent = "Liked"
-        this.setAttribute("like-value", "liked")
-        }
-
-    else {
-        likeIcon.className = "fa fa-heart-o"
-        this.textContent = "Like"
-        this.setAttribute("like-value", "like")
-        }
-    }
-)
-
-// Add event listener on Back Button
-// !!! Dependency on local storage of Event Main Page
-// !!! Pay attention that not directly link back to Event Main Page, need to link back to "selected"/"already loaded" Event Main Page
-backBtn.addEventListener("click", function(event) {
-
-    event.preventDefault();
-    backBtnText.setAttribute("href", "")
-
-}
-
-)
 
 // Grab evrnt id from url query string
 // !!! Dependency on href link from Event Main Page. href should be ./index.html?event=" + eventid
@@ -52,7 +18,7 @@ backBtn.addEventListener("click", function(event) {
 var getEventDetails = function() {
     
     //var event = getEventDetails()
-    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + "338509329517"   + "/?token=" + APIToken
+    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + "345788401417"   + "/?token=" + APIToken
 
     return fetch (eventApiUrl)
     .then (function (response) {
@@ -65,6 +31,7 @@ var getEventDetails = function() {
     })
     .then(function(data) {
         var eventDetails={
+            "event_id": data.id,
             "summary": data.summary,
             "logo_img": data.logo.url,
             "title": data.name.text,
@@ -307,3 +274,68 @@ genPage = function () {
 
 genPage()
 
+
+savedEventArray = []
+
+// Add event listener on Like button
+// If click "Like", heart icon turns into solid color, and button text turns into "Liked"
+// If click again, heart icon turns back to default color(transparent with border), and button text turns back to default text("Like")
+likeBtn.addEventListener("click", function(event){
+
+    event.preventDefault();
+    var likeIcon = document.getElementById("like-icon")
+    var likeValue = likeBtn.getAttribute("like-value")
+    var savedList = JSON.parse(localStorage.getItem("savedlist"))
+
+    if (likeValue == "like") {
+        likeIcon.className = "fa fa-heart"
+        this.textContent = "Liked"
+        this.setAttribute("like-value", "liked")
+
+        return comDetails()
+        .then(function(eventDetailsArray) {
+            if (savedList == null || savedList.length == 0) {
+                console.log(eventDetailsArray)
+                savedEventArray.push(eventDetailsArray)
+                localStorage.setItem("savedlist", JSON.stringify(savedEventArray))
+            }
+            else {
+                console.log(eventDetailsArray)
+                var newsavedlist = savedList.push(eventDetailsArray)
+                localStorage.setItem("savedlist", JSON.stringify(newsavedlist))
+            }
+            }
+        )
+        }
+
+    else {
+        likeIcon.className = "fa fa-heart-o"
+        this.textContent = "Like"
+        this.setAttribute("like-value", "like")
+
+        return comDetails()
+        .then(function(eventDetailsArray) {
+            if (savedList == null) {
+                return
+            }
+            else {
+                var newsaved = savedList.filter(data => data.id != eventDetailsArray.id);
+                localStorage.setItem("savedlist", JSON.stringify(newsaved))
+            }
+            }
+        )
+        }
+    }
+)
+
+// Add event listener on Back Button
+// !!! Dependency on local storage of Event Main Page
+// !!! Pay attention that not directly link back to Event Main Page, need to link back to "selected"/"already loaded" Event Main Page
+backBtn.addEventListener("click", function(event) {
+
+    event.preventDefault();
+    backBtnText.setAttribute("href", "")
+
+}
+
+)
