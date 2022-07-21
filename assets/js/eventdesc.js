@@ -224,13 +224,16 @@ genPage = function () {
     return comDetails()
     .then(function(eventDetailsArray) {
         console.log(eventDetailsArray)
+        var eventSummary = document.createElement("section")
+        eventSummary.className = "event-summary"
+
         var imgSec = document.createElement("img")
         imgSec.className = "event-img"
         imgSec.src = eventDetailsArray.logo_img
+
         var eventDetailsMain = document.createElement("section")
         eventDetailsMain.className = "event-details-main"
-        var eventName = document.createElement("p")
-        eventName.className = "event-name"
+        var eventName = document.createElement("h1")
         eventName.innerHTML = eventDetailsArray.title
         var eventDate = document.createElement("p")
         eventDate.className = "event-date"
@@ -247,8 +250,17 @@ genPage = function () {
         eventDetailsMain.appendChild(eventLocation)
         eventDetailsMain.appendChild(eventAddress)
 
+        eventSummary.appendChild(imgSec)
+        eventSummary.appendChild(eventDetailsMain)
+
+        var eventPriceMain = document.createElement("section")
+        eventPriceMain.className = "price-section"
+        var eventPriceHeader = document.createElement("h2")
+        eventPriceHeader.innerHTML = "Price"
+
         var eventPriceLi = document.createElement("ul")
         eventPriceLi.className = "event-price-main"
+        eventPriceLi.style = "list-style: none;"
         for (j=0; j <eventDetailsArray.price.length; j++) {
             (function(j) {
                 var eventPriceEl = document.createElement("li")
@@ -268,12 +280,16 @@ genPage = function () {
             }(j))
         }
 
+        eventPriceMain.appendChild(eventPriceHeader)
+        eventPriceMain.appendChild(eventPriceLi)
+
         var eventDescription = document.createElement("section")
         eventDescription.className = "event-desc-main"
-        var eventDescHeader = document.createElement("h1")
+        var eventDescHeader = document.createElement("h2")
         eventDescHeader.innerHTML = "About this event"
         var eventDescDetails = document.createElement("p")
         eventDescDetails.innerHTML = eventDetailsArray.summary
+        eventDescDetails.className = "event-desc-summary"
         var eventFullDescs = document.createElement("P")
         eventFullDescs.innerHTML = eventDetailsArray.fulldesc
 
@@ -281,9 +297,8 @@ genPage = function () {
         eventDescription.appendChild(eventDescDetails)
         eventDescription.appendChild(eventFullDescs)
 
-        eventMainEl.appendChild(imgSec)
-        eventMainEl.appendChild(eventDetailsMain)
-        eventMainEl.appendChild(eventPriceLi)
+        eventMainEl.appendChild(eventSummary)
+        eventMainEl.appendChild(eventPriceMain)
         eventMainEl.appendChild(eventDescription)
     }
 

@@ -1,6 +1,7 @@
 :root {
     --primary: #F07F30;
     --footer-background: #d3d3d3;
+    --border: #d3d3d3;
 }
 body {
     margin: 0;
@@ -56,6 +57,70 @@ header {
     font-size: 1em;
     color: var(--primary);
     cursor: pointer;
+    font-weight: bold;
+}
+
+.event-main {
+    padding: 10px 20px;
+}
+
+.event-summary {
+    display: flex;
+    padding: 5px 0px;
+    border-top: solid var(--border);
+}
+
+.event-img {
+    width: 50%;
+}
+
+.event-details-main {
+    width: 50%;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.event-details-main h1 {
+    font-size: 30px;
+    color: var(--primary);
+    padding: 10px 0px;
+}
+
+.event-date {
+    font-weight: bold;
+}
+
+.event-location {
+    font-weight: bold;
+}
+
+.event-address {
+    font-size: 15px;
+}
+
+.price-section {
+    padding: 5px 0px;
+    border-top: solid var(--border);
+}
+.price-section h2 {
+    text-align: center;
+    color: var(--primary);
+}
+.event-price-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.event-desc-main {
+    padding: 5px 0px;
+    border-top: solid var(--border);
+}
+.event-desc-main h2 {
+    text-align: center;
+    color: var(--primary);
+}
+
+.event-desc-summary {
     font-weight: bold;
 }
 
