@@ -11,46 +11,36 @@
 </head>
 <body>
     <header class="header">
-    <nav class="navbar">
-       
-        <ul>
-        <li> 
-            <h1 class="application-name"> 
-                <a href="./main.html">Event Hunter </a>
-            </h1>
-        </li>
-        <!--when like button clicked  number of click number increase-->
-       <li> 
-        <h3 class="likeMtrC">
-            <a id="event-like-page" href="savedlist.html">
-                Events you liked<span class="span">:</span></a><div id="likeMtr" class="likeMtrC-number">0</div> 
-        </h3>
-       </li>
+        <div class="logo">
+           <span id="navbar-logo"> <a href="./main.html"><h1>Event Hunter</h1></a> <span>
+            
+        </div>
+         <!--when like button clicked  number of click number increase-->
+        <div class="likemtrC">
+           <a id="event-like-page" class="eventN" href="savedlist.html"><h2>Event You Liked: </h2></a>
+            <input id="likeMtr" type="text" placeholder="0">
+        </div>
         <!--Create appendChild and display amountof event--><!--Chosed datas length display-->
-        <li>
-             <h3 class="eventN">Event Number<span class="span">:</span> <div id="nmbr-event" class="eventN-n">0</div>
-            </h3>
-        </li>
-        <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
-        <li> 
-            <h3 class="time-rng" >Time Range<span class="span">:</span> <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date">
-            </h3>
-        </li>
-        <!--Selevt Bar MJ-->
-        <li>
-            <h3><label for="city-names">Choose a location:</label>
-               
-        <select name="city-names" id="city-names">
-            <option class="city-color" value="new-york">New York</option>
-            <option class="city-color" value="miami">Miami</option>
-            <option  class="city-color"value="boston">Boston</option>
-            <option  class="city-color"value="washington">Washington</option>
-          </select>
-
-            </h3>
-        </li>
-    </ul>
+        <div class="eventN">
+            <h2>Event Number:</h2>
+            <input id="event-number" type="text" placeholder="50">
+        </div>
+         <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
+        <div class="event-time">
+            <h2 class="time-rng">Time Range: </h2>
+            <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date">
+        </div>
+        <div class="cities">
+            <h2>City: </h2>
+            <select name="city-names" id="city-names">
+                <option class="city-color" value="new-york">New York</option>
+                <option class="city-color" value="miami">Miami</option>
+                <option  class="city-color"value="boston">Boston</option>
+                <option  class="city-color"value="washington">Washington</option>
+              </select>
+        </div>
 </header>
+
 
     </nav>
 
@@ -60,7 +50,42 @@
             <div id="event-title">
                <h3 id="event-title-h3" class="event-inf">title</h3>
             </div>
-            <div id="event-img" style="width:100%" >
+            <div id="event-img" >
+                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
+                
+            </div>
+            <div id="event-location">
+               <h4 id="location" class="event-inf">test location</h4>
+            </div>
+            <div id="event-date">
+                <h4 id="date" class="event-inf">test date</h4>
+
+            </div>
+
+        </div>
+        <div id="event-container">
+            <div id="event-title">
+               <h3 id="event-title-h3" class="event-inf">title</h3>
+            </div>
+            <div id="event-img" >
+                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
+                
+            </div>
+            <div id="event-location">
+               <h4 id="location" class="event-inf">test location</h4>
+            </div>
+            <div id="event-date">
+                <h4 id="date" class="event-inf">test date</h4>
+
+            </div>
+            
+
+        </div>
+        <div id="event-container">
+            <div id="event-title">
+               <h3 id="event-title-h3" class="event-inf">title</h3>
+            </div>
+            <div id="event-img" >
                 <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
                 
             </div>
@@ -75,20 +100,31 @@
         </div>
 
 
+
+
     </main>
+    <footer>
+
     <!--footer you guys can Copy paste or can uptade it-->
-    <footer class="footer">
+    <div class="about">
+            <a href=""> <!-- !!! Dependency: placeholder for team page-->
+                About 
+            </a>
+        </div>
+        <div class="social-media">
+           <!-- !!!!! Adjusted!!!! --> 
+                <span><a href="fb.html">Facebook|</a></span>
+                 <span><a href="twitter.html">Twitter|</a></span>
+                 <span><a href="linkedin.html">Linkedin|</a></span>
+                 <span><a href="youtube.html">Youtube|</a></span>
+                 <span><a href="instagram.html">Instagram</a></span>
+        </div>
+          
+        <div class="contact">
+            <a href="" > <!-- !!! Dependency: placeholder for contact link -->
+                Contact</a>
+        </div>
    
-        
-        <ul class="social-media">
-            <li><h5><a href="./aboutus">About</a></h5></li>
-            <li><a href="#">Facebook | </a> <a href="#">Youtube | </a><a href="#">LinkedIn | </a> <a href="#">Instagram | </a> <a href="#">Youtube</a></li>
-            
-            <li><h5><a href="">Contact Us</a></h5></li>
-            
-        </ul>
-
     </footer>
-
 </body>
 </html>

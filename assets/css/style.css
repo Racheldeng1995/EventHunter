@@ -123,11 +123,16 @@ header {
 .event-desc-summary {
     font-weight: bold;
 }
-
-footer ul {
+footer{
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px ;
+    align-items: center;
+    padding: 20px;
+}
+footer ul {
+   
+   
+  display: flex;
     background-color: var(--footer-background);
     color: #808080;
     font-weight: bold;

@@ -1,99 +1,82 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
-  text-decoration: none;
-  list-style-type: none;
-  width: 100%;
   box-sizing: border-box;
-}
-/* header MJ*/
-.header {
-  display: flex;
-}
-.navbar {
-  padding: 20px 0px;
-  height: auto;
-  font-size: larger;
-  border: 1px solid var(--border);
-}
-
-.application-name a {
-  color: var(--primary);
   text-decoration: none;
- text-align: center;
-
-font-size: 32px;
+  font-family: "IBM Plex Sans", sans-serif;
+  
 }
 
-.navbar ul {
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+header h1{
+  color: var(--primary) ;
+  
+
+}
+.likemtrC,
+.cities,
+.event-time,
+.eventN {
   display: flex;
 }
+header h2{
+  color: black;
+}
 
-.likeMtrC,
-.eventN,
-.time-rng
- {
-  color: black;
-}
-.likeMtrC a {
-  color: black;
-}
-.likeMtrC-number,
-.eventN-n {
-  color: black;
-  display: inline;
-  margin-left: 20px;
-  border: 2px solid var(--primary);
-}
-/* select bar MJ */
-#city-names{
-  width: 40%;
-}
-.span {
-  color: black;
-}
 
 /*input Details MJ*/
-.input1 {
-  width: 100px;
-  margin-left: 10px;
-}
-.input2 {
-  width: 100px;
-  margin-left: 20px;
-}
-#user-input {
-  width: 170px;
-  height: 40px;
-  border: 2px solid var(--primary);
+header input,select {
+  width: 50px;
+  height: 30px;
+  border-color: var(--primary);
+  width:90px ;
+  
 }
 
 /* main conteiner MJ */
-#main-container{
+#main-container {
   width: 100%;
+  padding: 50px;
 }
-#event-container{
+#event-container {
   width: 20%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary)
-  
+  background-color: var(--primary);
+  margin: 5% 5%;
 }
-#event-img{width: 50%;}
-#event-img-pic{width: 80%;
-padding-left: 40px;}
+#event-img {
+  width: 50%;
+}
+#event-img-pic {
+  width: 80%;
+  padding-left: 40px;
+}
 
-.event-inf{
+.event-inf {
   font-weight: 900;
-  padding-left:50px ;
+  padding-left: 50px;
 }
 
 /*end header MJ*/
 
-.footer ul {
+
+/*footer style*/
+footer{
   display: flex;
-}
-.footer ul li a{
-    justify-content: space-between;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #808080;}
+
+  footer div a{
+    color: white;
+  }
+  /*end  footer*/
