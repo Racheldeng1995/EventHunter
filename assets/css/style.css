@@ -4,6 +4,7 @@
     --tertiary-color: rgb(119, 119, 121);
     --fourth-color: rgb(245, 245, 245);
     --fifth-color: white;
+    --sixth-color: rgb(217, 217, 217);
 }
 
 * {
@@ -12,8 +13,11 @@
     padding: 0;
 }
 
-body {
+body, html {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .content {
@@ -31,14 +35,17 @@ header h1 {
     padding: 15px 20px 10px 30px;
 }
 
+section {
+    height: 100%;
+}
+
 form {
     background-color: var(--secondary-color);
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-grow: 1;
+    margin-top: 100px;
+    margin-bottom: auto;
 }
 
 form h2 {
@@ -46,6 +53,36 @@ form h2 {
     text-align: center;
     padding: 100px 20px 10px 30px;
     font-size: 32px;
+}
+
+.form-input {
+    border: 1px solid var(--sixth-color);
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form button {
+    color: var(--fifth-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buttonHolder {
+    text-align: center;
+    padding: 10px 50px 40px 50px;
 }
 
 footer {
