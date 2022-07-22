@@ -48,7 +48,7 @@ form {
     margin-bottom: auto;
 }
 
-form h2 {
+h2 {
     color: var(--primary-color);
     text-align: center;
     padding: 100px 20px 10px 30px;
@@ -97,4 +97,47 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--tertiary-color);
+}
+
+.teamForm {
+    background-color: var(--secondary-color);
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.teamForm div {
+    padding: 10px;
+}
+
+.teamForm h2 {
+    background-color: var(--fifth-color);
+    padding: 10px 200px 10px 200px;
+    margin: 50px 150px 10px 150px;
+    border-radius: 15px;
+}
+
+.memberImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 150px 10px 150px;
+}
+
+.member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 15px;
+    padding: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
