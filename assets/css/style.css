@@ -107,6 +107,8 @@ footer a {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .teamForm div {
@@ -124,7 +126,7 @@ footer a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 150px 10px 150px;
+    margin: 10px 150px 10px 150px;
 }
 
 .member {
@@ -140,4 +142,18 @@ img {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.member h3 {
+    background-color: var(--fifth-color);
+    padding: 10px 20px 10px 20px;
+    margin: 20px 60px;
+    border-radius: 15px;
+}
+
+.member p {
+    background-color: var(--fifth-color);
+    padding: 10px 20px 10px 20px;
+    margin: 20px 60px;
+    border-radius: 15px;
 }
