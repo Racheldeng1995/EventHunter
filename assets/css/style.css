@@ -151,13 +151,13 @@ img {
 .member h3 {
     background-color: var(--fifth-color);
     padding: 10px 20px 10px 20px;
-    margin: 20px 60px;
+    margin: 20px 25px;
     border-radius: 15px;
 }
 
 .member p {
     background-color: var(--fifth-color);
     padding: 10px 20px 10px 20px;
-    margin: 20px 60px;
+    margin: 20px 25px;
     border-radius: 15px;
 }
