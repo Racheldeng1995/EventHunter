@@ -1,22 +1,34 @@
 :root {
     --primary: #F07F30;
-    --footer-background: #d3d3d3;
-    --border: #d3d3d3;
+    --secondary-color: rgb(255, 248, 239);
+    --tertiary-color: rgb(119, 119, 121);
+    --fourth-color: rgb(245, 245, 245);
+    --fifth-color: white;
+    --sixth-color: rgb(217, 217, 217);
 }
-body {
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.content {
+    height: 100%;
 }
 
 header {
     display: flex;
+    border-bottom: 3px solid var(--fourth-color);
 }
 
 .application-name {
     color: var(--primary) ;
-    padding: 0px 20px;
+    padding: 15px 20px 10px 30px;
     width: 80% ;
+    margin: 0;
+    font-size: 2em;
 }
 
 .application-name a {
@@ -28,9 +40,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 15px 20px 10px 30px;
     width: 20%;
     color: var(--primary);
+    margin: 0
 }
 
 .back-btn {
@@ -38,11 +51,12 @@ header {
     color: white;
     text-align: center;
     padding: 5px 5px;
-    border-radius: .3rem;
+    border-radius: 10px;
     font-size: 1em;
     font-weight: bold;
     border: 0px;
     cursor: pointer;
+    box-shadow: 1px 1px 6px grey;
 }
 
 .back-btn a {
@@ -61,13 +75,15 @@ header {
 }
 
 .event-main {
-    padding: 10px 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color);
 }
 
 .event-summary {
     display: flex;
-    padding: 5px 0px;
-    border-top: solid var(--border);
+    padding: 10px;
 }
 
 .event-img {
@@ -99,63 +115,104 @@ header {
 }
 
 .price-section {
-    padding: 5px 0px;
-    border-top: solid var(--border);
+    padding: 10px;
+    border-top: solid var(--fourth-color);
 }
 .price-section h2 {
     text-align: center;
     color: var(--primary);
+    background-color: var(--fifth-color);
+    padding: 10px 200px;
+    margin: 20px 150px 10px;
+    border-radius: 15px;
 }
 .event-price-main {
     display: flex;
     justify-content: space-around;
 }
 
+.price-detail {
+    background-color: var(--fifth-color);
+    padding: 10px 20px;
+    margin: 20px 25px;
+    border-radius: 15px;
+}
+
 .event-desc-main {
-    padding: 5px 0px;
-    border-top: solid var(--border);
+    padding: 10px;
+    border-top: solid var(--fourth-color);
 }
 .event-desc-main h2 {
     text-align: center;
     color: var(--primary);
+    background-color: var(--fifth-color);
+    padding: 10px 200px;
+    margin: 20px 150px 40px;
+    border-radius: 15px;
 }
 
+.event-desc-main p {
+    padding: 10px 10px;
+    background-color: var(--fifth-color);
+    border-radius: 15px;
+}
 .event-desc-summary {
     font-weight: bold;
+    padding: 10px 10px;
+    background-color: var(--fifth-color);
+    border-radius: 15px;
 }
 
 .event-main-saved {
-    padding: 10px 20px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
-    border-top: solid var(--border);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color);
 }
 
 .event-block {
     text-align: center;
-    padding: 5px 5px; 
-    width: 33%;
+    margin: 20px; 
+    width: 50%;
+    background-color: var(--fifth-color);
+    border-radius: 15px;
+}
+
+.event-block-img {
+    opacity: 70%;
+    border-radius: 15px;
+}
+
+.event-block-img:hover {
+    opacity: 100%;
+}
+
+.event-block h1 {
+    color: var(--primary);
 }
 
 .map {
     height: 400px;
     /* The height is 400 pixels */
-    width: 100%;
+    width: 69%;
     /* The width is the width of the web page */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color);
+    padding: 10px;
   }
-footer ul {
+
+footer {
+    background-color: var(--fourth-color);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px ;
-    background-color: var(--footer-background);
-    color: #808080;
-    font-weight: bold;
-    font-size: 1em;
+    padding: 15px 20px 10px 30px;
 }
 
 footer a {
-    color: #808080;
-    font-weight: bold;
-    font-size: 1em;
     text-decoration: none;
+    color: var(--tertiary-color);
 }
