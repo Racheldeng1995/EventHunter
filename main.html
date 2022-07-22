@@ -6,125 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
     <title>Event Hunter</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-           <span id="navbar-logo"> <a href="./main.html"><h1>Event Hunter</h1></a> <span>
-            
-        </div>
-         <!--when like button clicked  number of click number increase-->
-        <div class="likemtrC">
-           <a id="event-like-page" class="eventN" href="savedlist.html"><h2>Event You Liked: </h2></a>
-            <input id="likeMtr" type="text" placeholder="0">
-        </div>
-        <!--Create appendChild and display amountof event--><!--Chosed datas length display-->
-        <div class="eventN">
-            <h2>Event Number:</h2>
-            <input id="event-number" type="text" placeholder="50">
-        </div>
-         <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
-        <div class="event-time">
-            <h2 class="time-rng">Time Range: </h2>
-            <input id="date-i1 " class="input1" type="date"><input id="date-i2" class="input2"type="date">
-        </div>
-        <div class="cities">
-            <h2>City: </h2>
-            <select name="city-names" id="city-names">
-                <option class="city-color" value="new-york">New York</option>
-                <option class="city-color" value="miami">Miami</option>
-                <option  class="city-color"value="boston">Boston</option>
-                <option  class="city-color"value="washington">Washington</option>
-              </select>
-        </div>
-</header>
+    <div class="ui orange five item inverted menu">
+        
+        <a  href="main.html" class="active item">
+          <span class="span">Event Hunter</span>
+        </a>
+        
+        <a  href="savedlist.html" class="item  ">
+            <span class=span-sub>Liked Events:</span><input id="likeMtr" class="eventN" type="text" placeholder="0">
+        
+        </a><!--Create appendChild and display amountof event--><!--Chosed datas length display-->
+        <a class="item">
+            <span class=span-sub>Event Number:</span><input id="event-number" class="eventN"ctype="text" placeholder="50">
+        </a>
+        <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
+        <a class="item">
+            <span class=span-sub>Time : </span><input id="date-i1 " class="input1" type="date"><input  id="date-i2" class="input2"type="date">
+        </a> <a class="item">
+            <span class=span-sub>City: </span><select name="city-names" id="city-names">
+            <option class="city-color" value="new-york">New York</option>
+            <option class="city-color" value="miami">Miami</option>
+            <option  class="city-color"value="boston">Boston</option>
+            <option  class="city-color"value="washington">Washington</option>
+          </select>
+          
+        </a>
+       
+          
+          
+      </div>
+     
 
-
-    </nav>
+   
 
     <!--Example comments keep it pls MJ-->
     <main class="main-container">
-        <div id="event-container">
-            <div id="event-title">
-               <h3 id="event-title-h3" class="event-inf">title</h3>
-            </div>
-            <div id="event-img" >
-                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
+        <div  class="ui link cards">
+            <div class="card">
+              <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU">
+              </div>
+              <div class="content">
+
+                <div id="title"class="header">Title    
+                </div>
                 
-            </div>
-            <div id="event-location">
-               <h4 id="location" class="event-inf">test location</h4>
-            </div>
-            <div id="event-date">
-                <h4 id="date" class="event-inf">test date</h4>
-
-            </div>
-
-        </div>
-        <div id="event-container">
-            <div id="event-title">
-               <h3 id="event-title-h3" class="event-inf">title</h3>
-            </div>
-            <div id="event-img" >
-                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
+                <div id="date"class="date">
+                   Date
+                </div>
+             
+                <div id="location">
+                  location
+                 
+                </div>
+                </div>
+              </div>
+              </div>
+              <main class="main-container">
+                <div  class="ui link cards">
+                    <div class="card">
+                      <div class="image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU">
+                      </div>
+                      <div class="content">
+        
+                        <div id="title"class="header">Title    
+                        </div>
+                        
+                        <div id="date"class="date">
+                           Date
+                        </div>
+                     
+                        <div id="location">
+                          location
+                         
+                        </div>
+                        </div>
+                      </div>
+                      </div>
+                      <main class="main-container">
+                        <div  class="ui link cards">
+                            <div class="card">
+                              <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU">
+                              </div>
+                              <div class="content">
                 
-            </div>
-            <div id="event-location">
-               <h4 id="location" class="event-inf">test location</h4>
-            </div>
-            <div id="event-date">
-                <h4 id="date" class="event-inf">test date</h4>
+                                <div id="title"class="header">Title    
+                                </div>
+                                
+                                <div id="date"class="date">
+                                   Date
+                                </div>
+                             
+                                <div id="location">
+                                  location
+                                 
+                                </div>
+                                </div>
+                              </div>
+                              </div>
 
-            </div>
-            
-
-        </div>
-        <div id="event-container">
-            <div id="event-title">
-               <h3 id="event-title-h3" class="event-inf">title</h3>
-            </div>
-            <div id="event-img" >
-                <img id="event-img-pic" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" width="40%">
-                
-            </div>
-            <div id="event-location">
-               <h4 id="location" class="event-inf">test location</h4>
-            </div>
-            <div id="event-date">
-                <h4 id="date" class="event-inf">test date</h4>
-
-            </div>
-
-        </div>
-
-
-
-
+             
     </main>
     <footer>
-
+        <div  id="footer" class="ui container">
     <!--footer you guys can Copy paste or can uptade it-->
-    <div class="about">
-            <a href=""> <!-- !!! Dependency: placeholder for team page-->
+    <div>
+            <a href="#"> <!-- !!! Dependency: placeholder for team page-->
                 About 
             </a>
         </div>
-        <div class="social-media">
+        <div>
            <!-- !!!!! Adjusted!!!! --> 
                 <span><a href="fb.html">Facebook|</a></span>
                  <span><a href="twitter.html">Twitter|</a></span>
                  <span><a href="linkedin.html">Linkedin|</a></span>
                  <span><a href="youtube.html">Youtube|</a></span>
                  <span><a href="instagram.html">Instagram</a></span>
-        </div>
-          
-        <div class="contact">
-            <a href="" > <!-- !!! Dependency: placeholder for contact link -->
+                 <div>
+       
+            <a href="#" > <!-- !!! Dependency: placeholder for contact link -->
                 Contact</a>
-        </div>
-   
+          
+    </div>
     </footer>
 </body>
 </html>
