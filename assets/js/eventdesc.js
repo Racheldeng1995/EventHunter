@@ -48,7 +48,7 @@ genHeader();
 var eventId = getEventId()
 
 // For test purpose
-var testevent = "335539506697"
+var testevent = "345788401417"
 
 // Get event symmary from API, public fields
 // Replace testevent by eventId
@@ -398,7 +398,7 @@ likeBtn.addEventListener("click", function(event){
 backBtn.addEventListener("click", function(event) {
 
     event.preventDefault();
-    backBtnText.setAttribute("href", "")
+    window.history.go(-1)
 
 }
 
