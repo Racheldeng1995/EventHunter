@@ -22,7 +22,7 @@
 .span {
   font-size: 24px;
   color: var(--primary);
-  background-color: rgb(255, 255, 255);
+color: white;
   padding: 9px;
   border-radius: 5px;
   font-weight: bold;
