@@ -1,11 +1,17 @@
 var savedItems = JSON.parse(localStorage.getItem("savedlist"))
 
-var num = savedItems.length
+if (savedItems == null) {
+    var num = 0
+}
+else {
+    var num = savedItems.length
+}
 
 var eventsLikedNum = document.getElementById("events-you-liked")
 
 // Automatically display current number of events you liked
 var genEventsNum = function () {
+
     eventsLikedNum.innerHTML = "Events you liked: " + num
 }
 
@@ -40,12 +46,16 @@ var genEventList = function(eventlist) {
 
 // Loop though all the items from array on local storage
 var eventSavedMain = document.getElementById("event-main")
-for (i=0; i < savedItems.length; i++) {
-    (function(i) {
-        console.log(savedItems[i])
-        genEventList(savedItems[i])
-        
-    }(i)
-    )
+if (savedItems != null) { 
+    for (i=0; i < savedItems.length; i++) {
+        (function(i) {
+            console.log(savedItems[i])
+            genEventList(savedItems[i])
+            
+        }(i)
+        )
+    }
 }
+
+
 

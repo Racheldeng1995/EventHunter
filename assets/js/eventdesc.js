@@ -48,7 +48,7 @@ genHeader();
 var eventId = getEventId()
 
 // For test purpose
-var testevent = "345788401417"
+var testevent = "164264538657"
 
 // Get event symmary from API, public fields
 // Replace testevent by eventId
