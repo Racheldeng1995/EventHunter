@@ -17,4 +17,11 @@ var taskFormHandler = function () {
     window.location.href = 'team.html';
 };
 
+function initialize() {
+    var input = document.getElementById('city');
+    new google.maps.places.Autocomplete(input);
+};
+  
+google.maps.event.addDomListener(window, "load", initialize);
+
 formEl.addEventListener("submit", taskFormHandler);
