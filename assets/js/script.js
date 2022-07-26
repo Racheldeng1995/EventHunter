@@ -18,8 +18,12 @@ var taskFormHandler = function () {
 };
 
 function initialize() {
+    var options = {
+        types: ['(cities)'],
+        componentRestrictions: {country: "us"}
+    };
     var input = document.getElementById('city');
-    new google.maps.places.Autocomplete(input);
+    new google.maps.places.Autocomplete(input, options);
 };
   
 google.maps.event.addDomListener(window, "load", initialize);
