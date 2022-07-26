@@ -83,6 +83,7 @@ form button {
     border-radius: 10px;
     text-align: center;
     box-shadow: 1px 1px 6px grey;
+    cursor: pointer;
 }
 
 .buttonHolder {
