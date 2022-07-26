@@ -18,10 +18,19 @@
 
             <!-- START hero -->
             <section>
-                <form>
+                <form id="search-form">
                     <h2>Find your interest food & drink events!</h2>
-                    <input type="text" placeholder="Choose Time Range" name="timeRange" id="timeRange" class="form-input" />
-                    <input type="text" placeholder="Enter Your City" name="city" id="city" class="form-input" />
+                    <div class="form-group">
+                        <select name="timeRange" id="timeRange" class="form-input select-dropdown">
+                            <option value="" disabled selected>Choose Time Range</option>
+                            <option value="1_Day">1 Day</option>
+                            <option value="1_Week">1 Week</option>
+                            <option value="1_Month">1 Month</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Your City" name="city" id="city" class="form-input" />
+                    </div>
                     <div class="buttonHolder">
                         <a href = "./team.html">
                             <button id="generate" class="btn" >Get Started!</button>

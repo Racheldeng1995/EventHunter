@@ -59,6 +59,18 @@ h2 {
     font-size: 32px;
 }
 
+.select-dropdown {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--tertiary-color);
+    background-color: var(--fifth-color);
+    background-image: url("../images/select-arrow.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 1.25em auto, 100%;
+}
+
 .form-input {
     border: 1px solid var(--sixth-color);
     display: block;
@@ -71,6 +83,7 @@ h2 {
     margin-bottom: 40px;
     border-radius: 5px;
     text-align: center;
+    flex: 1;
 }
 
 form button {
