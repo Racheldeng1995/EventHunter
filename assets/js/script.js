@@ -1,10 +1,11 @@
 formEl = document.querySelector("#search-form");
+btnEl= document.getElementById("#start-btn");
 
 var taskFormHandler = function () {
     event.preventDefault();
     var timeRangeInput = document.querySelector("select[name='timeRange']").value;
     var cityInput = document.querySelector("input[name='city']").value;
-
+    
     console.log(timeRangeInput);
     console.log(cityInput);
     // check if input values are empty strings
@@ -13,8 +14,9 @@ var taskFormHandler = function () {
         return false;
     }
     
+    btnEl.href = "./main.html?city=" + cityInput;  
     // Redirect to event page
-    window.location.href = 'team.html';
+    // window.location.href = 'team.html';
 };
 
 function initialize() {
@@ -25,7 +27,7 @@ function initialize() {
     var input = document.getElementById('city');
     new google.maps.places.Autocomplete(input, options);
 };
-  
+
 google.maps.event.addDomListener(window, "load", initialize);
 
 formEl.addEventListener("submit", taskFormHandler);
