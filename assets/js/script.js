@@ -1,6 +1,6 @@
 formEl = document.querySelector("#search-form");
-btnEl= document.getElementById("#start-btn");
-
+btnEl= document.getElementById("start-btn");
+console.log(btnEl);
 var taskFormHandler = function () {
     event.preventDefault();
     var timeRangeInput = document.querySelector("select[name='timeRange']").value;
