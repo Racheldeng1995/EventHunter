@@ -69,6 +69,7 @@ h2 {
     background-repeat: no-repeat, repeat;
     background-position: right 0.7em top 50%, 0 0;
     background-size: 1.25em auto, 100%;
+    cursor: pointer;
 }
 
 .form-input {
