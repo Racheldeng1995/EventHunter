@@ -1,43 +1,41 @@
-eventList=[]
+ var savedItems = JSON.parse(localStorage.getItem("savedlist"))
 
-var cityId = function() {
-    var title=querySelector("title")
+if (savedItems == null) {
+    var num = 0
+}
+else {
+    var num = savedItems.length
+}
 
-    cityId = document.location.search;
-     title = cityId.split("=")[1];
-  
-    return title;
-};
-
-
-
-var startDate=document.querySelector("date-i1")
-var stopDate=document.querySelector("date-i2")
-
-document.querySelector('.inputD').addEventListener("click",event =>{
-// get days from calendar
-function getDates(startDate, stopDate) {
-    var dateArray = [];
-    var currentDate = moment(startDate);
-    var stopDate = moment(stopDate);
-    while (currentDate <= stopDate) {
-      dateArray.push(moment(currentDate).format('YYYY-MM-DD'))
-      currentDate = moment(currentDate).add(1, 'days');
-    }
-    return dateArray;
-    if (dateArray = startDate,stopDate){localStorage.setItem("#Choosen Dates", document.getElementById(startDate,stopDate).value)}
+var likedEvents = document.getElementById("likeMtr")
+likedEvents.innerHTML = num
 
 
-}});
+var wine1  = function(newElement) {
+    fetch("https://www.eventbriteapi.com/v3/events/310224599127" + "/?token=" +"ZK55TMREDURZKUJDZZ64")
 
+    .then(function(response){
+        return response.json();
+    })
+    .then (function(data){
+        console.log(data)
+    })
+    .then(function(data) {
+        var eventD={
+            "event_id": data.id,
+            "logo_img": data.logo.url,
+            "title": data.name.text,
+            "location_name": data.venue_id
+        }
+        return eventDetails
 
-
+    })}
 
 
 // Fetching test data from server
 
-var token ="ZK55TMREDURZKUJDZZ64"
-var test="362083691067"
+var token = "ZK55TMREDURZKUJDZZ64"
+var test="328814953377"
 var testApi= "https://www.eventbriteapi.com/v3/events/" + test   + "/?token=" + token
 
 fetch(testApi)
@@ -45,7 +43,8 @@ fetch(testApi)
     return response.json();
 })
 .then(function(data){
-    console.log(data) //comin event=>for loopp {for each single call(event function way )}
+    console.log(data) 
+    newElement(data);
   
 })
 
@@ -55,7 +54,10 @@ fetch(testApi)
          var singleEvent = document.getElementById("main")
          singleEvent.className ="main-container"
          
-         newElement = function(){
+         newElement = function(data){
+
+
+      
 
        
         var mainDiv = document.createElement("div")
@@ -66,8 +68,8 @@ fetch(testApi)
         
        var imgDiv = document.createElement("img")
         imgDiv.className = "image"
-        imgDiv.content
-        imgDiv.src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU" //jason img link
+        imgDiv.src=data.logo.url
+       
        
         var eventTitleDiv = document.createElement("div")
         eventTitleDiv.className = "content c-div"
@@ -75,37 +77,32 @@ fetch(testApi)
        
         var eventName = document.createElement("div")
         eventName.className="header"
-        eventName.innerHTML="title" // needs to check it might be jason
-        eventName.innerHTML = singleEvent.evetName
+        eventName.innerHTML="title"
+        eventName.innerHTML =data.name.text
        
         var eventDate = document.createElement("div")
         eventDate.className="date-location"
         eventDate.innerHTML="Date" // needs to check it might be jason
-        eventDate.innerHTML = singleEvent.eventDate
+        eventDate.innerHTML = data.end.utc
        
 
-        var eventLocation = document.createElement("h4")
-        eventLocation.className = "date-location"
-        eventLocation.innerHTML="location"
-        eventLocation.innerHTML =singleEvent.location_name
+        // var eventLocation = document.createElement("h4")
+        // eventLocation.className = "date-location"
+        // eventLocation.innerHTML="location"
+        // eventLocation.innerHTML =data.location_name
         
-        
-        singleEvent.appendChild(imgDiv)
-        singleEvent.appendChild(eventName)
-        singleEvent.appendChild(eventDate)
-        singleEvent.appendChild(eventLocation)
+        mainDiv.appendChild(subContainerDiv)
+        subContainerDiv.appendChild(imgDiv)
+        subContainerDiv.appendChild(eventName)
+       subContainerDiv.appendChild(eventDate)
+        // singleEvent.appendChild(eventLocation)
+         singleEvent.appendChild(mainDiv)
+
          }
-        
-        
 
+          
 
-
-function incLike(){
-
-    document.getElementById("like-btn").innerHTML 
 
   
     
 
-    }
-    
