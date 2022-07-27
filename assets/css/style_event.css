@@ -69,6 +69,10 @@ header {
     margin: 0
 }
 
+.events-you-liked a {
+    color: var(--primary) ;
+}
+
 .back-btn {
     background-color: var(--primary);
     color: white;

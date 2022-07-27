@@ -174,7 +174,10 @@ var eventsLikedNum = document.getElementById("events-you-liked")
 // Automatically display current number of events you liked
 var genEventsNum = function () {
 
-    eventsLikedNum.innerHTML = "Events you liked: " + num
+    var savedList = document.createElement("a")
+    savedList.href = "./savedlist.html"
+    savedList.innerHTML = "Events you liked: " + num
+    eventsLikedNum.appendChild(savedList)
 }
 
 genEventsNum()

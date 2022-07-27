@@ -46,8 +46,6 @@ btnBl.onclick = function () {
     console.log(timeRangeInput);
     console.log(cityInput);
     btnEl.href = "./eventmainv2.html?city=" + cityInput+ "&timerange=" + timeRangeInput;
-    //window.location.href = "./eventmainv2.html?city=" + cityInput+ "&timerange=" + timeRangeInput; 
-    //console.log(window.location.href)
 }
 
 

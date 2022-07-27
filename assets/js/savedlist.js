@@ -57,5 +57,13 @@ if (savedItems != null) {
     }
 }
 
+var backBtn = document.getElementById("back-btn")
 
+backBtn.addEventListener("click", function(event) {
 
+    event.preventDefault();
+    window.history.go(-1)
+
+}
+
+)
