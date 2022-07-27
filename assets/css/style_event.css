@@ -36,12 +36,35 @@ header {
     text-decoration: none;
 }
 
+.application-name-event-main {
+    color: var(--primary) ;
+    padding: 15px 20px 10px 30px;
+    width: 40% ;
+    margin: 0;
+    font-size: 2em;
+}
+
+.application-name-event-main a {
+    color: var(--primary) ;
+    text-decoration: none;
+}
+
 .application-action {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px 10px 30px;
     width: 30%;
+    color: var(--primary);
+    margin: 0
+}
+
+.application-action-event-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 10px 30px;
+    width: 60%;
     color: var(--primary);
     margin: 0
 }

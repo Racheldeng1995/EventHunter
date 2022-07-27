@@ -48,13 +48,13 @@ genHeader();
 var eventId = getEventId()
 
 // For test purpose
-var testevent = "164264538657"
+//var eventId = "164264538657"
 
 // Get event symmary from API, public fields
-// Replace testevent by eventId
+// Replace eventId by eventId
 var getEventDetails = function() {
     
-    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent   + "/?token=" + APIToken
+    var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + eventId   + "/?token=" + APIToken
 
     return fetch (eventApiUrl)
     .then (function (response) {
@@ -121,7 +121,7 @@ var getLocationGeo = function() {
 // Get price details, price fields are in expansion, can't generate from initial api call
 var getTicketPrice = function() {
 
-    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent + "/ticket_classes"   + "/?token=" + APIToken
+    var priceApiUrl = "https://www.eventbriteapi.com/v3/events/" + eventId + "/ticket_classes"   + "/?token=" + APIToken
 
     return fetch (priceApiUrl)
     .then (function (response) {
@@ -172,7 +172,7 @@ var getTicketPrice = function() {
 // Get Full description, can't get from initial call, need to call structued_content
 var getFullDesc = function() {
     
-    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + testevent + "/structured_content"   + "/?token=" + APIToken
+    var descApiUrl = "https://www.eventbriteapi.com/v3/events/" + eventId + "/structured_content"   + "/?token=" + APIToken
 
     return fetch (descApiUrl)
     .then (function (response) {

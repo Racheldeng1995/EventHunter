@@ -9,15 +9,18 @@ var taskFormHandler = function () {
     console.log(timeRangeInput);
     console.log(cityInput);
     // check if input values are empty strings
-    if (!timeRangeInput || !cityInput) {
-        alert("You need to fill out the search form!");
-        return false;
-    }
+    // if (!timeRangeInput || !cityInput) {
+    //     alert("You need to fill out the search form!");
+    //     return false;
+    // }
     
-    btnEl.href = "./main.html?city=" + cityInput;  
+    //btnEl.href = "./eventmainv2.html?city=" + cityInput+ "&timerange=" + timeRangeInput; real code 
+    btnEl.href = "./eventmainv2.html?city=" + "Los Angeles"+ "&timerange=" + "1 Week";  //test purpose
     // Redirect to event page
     // window.location.href = 'team.html';
 };
+
+formEl.addEventListener("submit", taskFormHandler);
 
 function initialize() {
     var options = {
@@ -30,4 +33,3 @@ function initialize() {
 
 google.maps.event.addDomListener(window, "load", initialize);
 
-formEl.addEventListener("submit", taskFormHandler);
