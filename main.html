@@ -15,25 +15,34 @@
     <div class="ui orange five item inverted menu">
         
         <a  href="main.html" class="active item">
-          <span class="span">Event <span class="hunter-span">Hunter</span></span>
+          <span class="span">Event<span class="hunter-span">Hunter</span></span>
         </a>
         
         <a  href="savedlist.html" class="item  ">
-            <span class=span-sub>Liked Events:</span><input id="likeMtr" class="eventN" type="text" placeholder="0">
+            <span class=span-sub>Liked Events:</span><div id="likeMtr" class="eventN"> 0</div>
         
         </a><!--Create appendChild and display amountof event--><!--Chosed datas length display-->
         <a class="item">
-            <span class=span-sub>Event Number:</span><input id="event-number" class="eventN"ctype="text" placeholder="50">
+            <span class=span-sub>Event Number:</span><div id="event-number" class="eventN">0</div>
         </a>
         <!--https://stackoverflow.com/questions/35468249/getting-a-list-of-all-dates-within-a-given-date-range-in-javascript-->
         <a class="item">
-            <span class=span-sub>Time : </span><input id="date-i1 " class="input1" type="date"><input  id="date-i2" class="input2"type="date">
-        </a> <a class="item">
-            <span class=span-sub>City: </span><select name="city-names" id="city-names">
-            <option class="city-color" value="new-york">New York</option>
-            <option class="city-color" value="miami">Miami</option>
-            <option  class="city-color"value="boston">Boston</option>
-            <option  class="city-color"value="washington">Washington</option>
+          <span class=span-sub>City: </span>
+          <select name="timeZone" id="timeZone">
+            <option value="1_Day">1 Day</option>
+            <option value="1_Week">1 Week</option>
+            <option value="1_Month">1 Month</option>
+            
+          </select>
+        </a> 
+        <a class="item">
+            <span class=span-sub>City: </span>
+
+            <select name="city-names" id="city-names">
+            <option class="city-color" value="new-york">Manhattan</option>
+            <option class="city-color" value="miami">Brooklyn</option>
+            <option  class="city-color"value="boston">New Jerey</option>
+            
           </select>
           
         </a>
@@ -57,61 +66,41 @@
                 <div id="title"class="header">Title    
                 </div>
                 
-                <div id="date"class="date">
+                <div id="date"class="date-location">
                    Date
                 </div>
              
-                <div id="location">
+                <div id="location" class="date-location">
                   location
                  
                 </div>
                 </div>
               </div>
               </div>
-              <main class="main-container">
+            <!--second example-->
+              <main  id="main"class="main-container">
                 <div  class="ui link cards">
                     <div class="card">
                       <div class="image">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU">
                       </div>
-                      <div class="content">
+                      <div class="content c-div ">
         
                         <div id="title"class="header">Title    
                         </div>
                         
-                        <div id="date"class="date">
+                        <div id="date"class="date-location">
                            Date
                         </div>
                      
-                        <div id="location">
+                        <div id="location" class="date-location">
                           location
                          
                         </div>
                         </div>
                       </div>
                       </div>
-                      <main class="main-container">
-                        <div  class="ui link cards">
-                            <div class="card">
-                              <div class="image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU">
-                              </div>
-                              <div class="content">
-                
-                                <div id="title"class="header">Title    
-                                </div>
-                                
-                                <div id="date"class="date">
-                                   Date
-                                </div>
-                             
-                                <div id="location">
-                                  location
-                                 
-                                </div>
-                                </div>
-                              </div>
-                              </div>
+                   
 
              
     </main>
@@ -174,6 +163,8 @@
 
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/eventdesc.js"></script>
     
 </body>
 </html>

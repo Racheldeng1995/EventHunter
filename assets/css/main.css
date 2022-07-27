@@ -9,16 +9,9 @@
   color:  lightseagreen;
   font: normal 36px 'Open Sans', cursive;
 }
-/*input style*/
-.input1,
-.input2 {
-  width: 110px;
-}
 
-#event-number,
-#likeMtr {
-  width: 110px;
-}
+
+
 .span {
   font-size: 24px;
   color: var(--primary);
@@ -40,6 +33,7 @@ color: white;
   display: flex;
 }
 
+.date-location{font-weight: bold;}
 
 .cards .card{display: flex;
 }   
