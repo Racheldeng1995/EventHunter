@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Event Hunter</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6L60mmgaOj5P-gN3nUc5UXnb-NFPa7rA&libraries=places"></script>
+    </head>
+    <body>
+        <div class="content">
+            <!-- START navigation -->
+            <header>
+                <a href="./index.html">
+                    <h1>Event Hunter</h1>
+                </a>
+            </header>
+            <!-- END navigation -->
+
+            <!-- START hero -->
+            <section>
+                <form id="search-form">
+                    <h2>Find your interest food & drink events!</h2>
+                    <div class="form-group">
+                        <select name="timeRange" id="timeRange" class="form-input select-dropdown">
+                            <option value="" disabled selected>Choose Time Range</option>
+                            <option value="1_Day">1 Day</option>
+                            <option value="1_Week">1 Week</option>
+                            <option value="1_Month">1 Month</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Your City" name="city" id="city" class="form-input" />
+                    </div>
+                    <div class="buttonHolder">
+                        <a id="start-btn">
+                            <button id="generate" class="btn" >Get Started!</button>
+                        </a>
+                    </div>
+                </form>
+            </section>
+            <!-- END hero-->
+
+            <!-- START footer -->
+            <footer>
+                <div>
+                    <a href="./team.html">About</a>
+                </div>
+                <div>
+                    <a href="/">Facebook</a>
+                    <a href="/">Twitter</a>
+                    <a href="/">LinkedIn</a>
+                    <a href="/">Youtube</a>
+                    <a href="/">Instagram</a>
+                </div>
+                <div>
+                    <a href="./team.html">Contact Us</a>
+                </div>
+            </footer>
+            <!-- END footer -->
+        </div>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>

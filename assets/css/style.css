@@ -1,0 +1,178 @@
+:root {
+    --primary-color: rgb(240, 127, 48);
+    --secondary-color: rgb(255, 248, 239);
+    --tertiary-color: rgb(119, 119, 121);
+    --fourth-color: rgb(245, 245, 245);
+    --fifth-color: white;
+    --sixth-color: rgb(217, 217, 217);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    border-bottom: 3px solid var(--fourth-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+    padding: 15px 20px 10px 30px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+section {
+    height: 100%;
+}
+
+form {
+    background-color: var(--secondary-color);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 100px 20px 10px 30px;
+    font-size: 32px;
+}
+
+.select-dropdown {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--tertiary-color);
+    background-color: var(--fifth-color);
+    background-image: url("../images/select-arrow.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 1.25em auto, 100%;
+    cursor: pointer;
+}
+
+.form-input {
+    border: 1px solid var(--sixth-color);
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+}
+
+form button {
+    color: var(--fifth-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 6px grey;
+    cursor: pointer;
+}
+
+.buttonHolder {
+    text-align: center;
+    padding: 10px 50px 40px 50px;
+}
+
+footer {
+    background-color: var(--fourth-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px 10px 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.teamForm {
+    background-color: var(--secondary-color);
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.teamForm div {
+    padding: 10px;
+}
+
+.teamForm h2 {
+    background-color: var(--fifth-color);
+    padding: 10px 200px 10px 200px;
+    margin: 50px 150px 10px 150px;
+    border-radius: 15px;
+}
+
+.memberImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 150px 10px 150px;
+}
+
+.member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 15px;
+    padding: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member h3 {
+    background-color: var(--fifth-color);
+    padding: 10px 20px 10px 20px;
+    margin: 20px 25px;
+    border-radius: 15px;
+}
+
+.member p {
+    background-color: var(--fifth-color);
+    padding: 10px 20px 10px 20px;
+    margin: 20px 25px;
+    border-radius: 15px;
+}
