@@ -1,6 +1,8 @@
 
 var APIToken = "ZK55TMREDURZKUJDZZ64"
 
+var backBtn = document.getElementById("back-btn")
+
 var eventSumList = [
     {
         eventid: "335539506697",
@@ -67,9 +69,10 @@ var eventSumList = [
 var getSearchPara = function () {
 
     var queryString = document.location.search;
+    console.log(queryString)
     var cityName = queryString.split("=")[1].split("&")[0].replace("%20", " ");
     console.log(cityName)
-    var timeRange = queryString.split("=")[2].replace("%20", " ")
+    var timeRange = queryString.split("=")[2].replace("_", " ")
     console.log(timeRange)
       
     return [cityName,timeRange]
@@ -239,4 +242,13 @@ for (i=0; i < disArray.length; i++) {
     }(i)
     )
 }
+
+backBtn.addEventListener("click", function(event) {
+
+    event.preventDefault();
+    window.history.go(-1)
+
+}
+
+)
 
