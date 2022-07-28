@@ -286,4 +286,33 @@ header {
 
 /* END MAIN PAGE*/
 
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
 
+    .application-action-event-main {
+        width: 80% ;
+        font-size: 1em;
+    }
+
+    .event-main-saved {
+        width: 100%;
+    }
+
+    
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    .application-action-event-main {
+        width: 80% ;
+        font-size: 0.75em;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE AND SMALLER */
+@media screen and (max-width: 540px) {
+    .application-action-event-main {
+        width: 80% ;
+        font-size: 0.5em;
+    }
+}
