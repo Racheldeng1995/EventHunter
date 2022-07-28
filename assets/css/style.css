@@ -105,6 +105,10 @@ form button {
     padding: 10px 50px 40px 50px;
 }
 
+.btn a {
+    color: var(--fifth-color);
+}
+
 footer {
     background-color: var(--fourth-color);
     display: flex;
