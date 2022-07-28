@@ -297,8 +297,6 @@ header {
     .event-main-saved {
         width: 100%;
     }
-
-    
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -307,12 +305,30 @@ header {
         width: 80% ;
         font-size: 0.75em;
     }
+
+    .event-main-saved {
+        width: 100%;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE AND SMALLER */
 @media screen and (max-width: 540px) {
+    h1 a {
+        font-size: 18px;
+    }
+
     .application-action-event-main {
-        width: 80% ;
-        font-size: 0.5em;
+        width: 100% ;
+        font-size: 0.65em;
+    }
+
+    .event-main-saved {
+        display: block;
+    }
+
+    .event-block {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
