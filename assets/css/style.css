@@ -109,18 +109,7 @@ form button {
     color: var(--fifth-color);
 }
 
-/* footer {
-    background-color: var(--fourth-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px 10px 30px;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--tertiary-color);
-} */
+/* START TEAM PAGE*/
 
 .teamForm {
     background-color: var(--secondary-color);
@@ -179,4 +168,28 @@ img {
     padding: 10px 20px 10px 20px;
     margin: 20px 25px;
     border-radius: 15px;
+}
+
+/* END TEAM PAGE*/
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .form-input {
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .form-input {
+        font-size: 12px;
+    }
 }

@@ -118,7 +118,7 @@ margin-bottom: 5px;
 }
 
 
-@media (max-width: 880px) {
+/* @media (max-width: 880px) {
 
 .footer-distributed{
     font: bold 14px sans-serif;
@@ -137,6 +137,16 @@ margin-bottom: 5px;
     margin-left: 0;
 }
 
+} */
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
 }
-  
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    
+}
+
 /*end  footer*/
