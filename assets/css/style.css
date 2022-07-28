@@ -109,14 +109,12 @@ form button {
     color: var(--fifth-color);
 }
 
+/* START TEAM PAGE*/
 #search-form{
    margin-bottom: 15%;
    width: 70%;
    height: 600px;
 }
-
-
-
 
 .section-teamform{
     display: flex;
@@ -199,4 +197,65 @@ img {
     padding: 10px 20px 10px 20px;
     margin: 20px 25px;
     border-radius: 15px;
+}
+
+/* END TEAM PAGE*/
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .form-input {
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    header h1 {
+        color: var(--primary-color);
+        text-align: center ;
+        /* padding: 15px 20px 10px 30px; */
+    }
+
+    form {
+        width: 80%;
+        margin-top: auto;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .form-input {
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE AND SMALLER */
+@media screen and (max-width: 412px) {
+    header h1 {
+        color: var(--primary-color);
+        text-align: center ;
+        /* padding: 15px 20px 10px 30px; */
+    }
+
+    form {
+        width: 80%;
+        margin-top: auto;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .form-input {
+        font-size: 8px;
+    }
+
+    form button {
+        font-size: 8px;
+    }
 }

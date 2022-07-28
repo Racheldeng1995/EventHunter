@@ -15,7 +15,7 @@ footer a {
 
 /* Footer Left*/
 .footer-left {
-    width: 35%;
+    width: 25%;
 } 
 
 /* Footer Center */
@@ -118,7 +118,7 @@ margin-bottom: 5px;
 }
 
 
-@media (max-width: 880px) {
+/* @media (max-width: 880px) {
 
 .footer-distributed{
     font: bold 14px sans-serif;
@@ -137,18 +137,76 @@ margin-bottom: 5px;
     margin-left: 0;
 }
 
-}
-@media only screen and  (max-width: 850px){
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
 
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
+    .footer-left {
+        width: 15%;
+    } 
+
+
     .footer-distributed .footer-right{
-        display: block;
+        width: 40%;
+    }
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left {
         width: 100%;
-    padding: 5%;
+        display: flex;
+        justify-content: space-around;
+    } 
+    
+    .footer-distributed .footer-center{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-distributed .footer-right{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+    .footer-distributed .footer-company-about{
         text-align: center;
-        justify-content: center;
     }
 }
-  
-/*end  footer*/
+
+/* MEDIA QUERY FOR MOBILE AND SMALLER */
+@media screen and (max-width: 540px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    } 
+    
+    .footer-distributed .footer-center{
+        width: 100%;
+    }
+
+    .footer-distributed .footer-right{
+        width: 100%;
+    }
+        
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color: var(--tertiary-color);
+        font-size: 10px;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+/* END FOOTER*/
