@@ -225,14 +225,22 @@ header {
     padding: 10px;
     width: 45%;
     background-color: var(--fifth-color);
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
+.event-block h3 {
+    margin-top: 15px;
+}
+
+.event-block p {
+    margin-bottom: 10px;
+}
+
 .event-block-img {
-    opacity: 70%;
+    opacity: 100%;
     border-radius: 15px;
     padding: 10px;
     width: 300px;
@@ -241,7 +249,8 @@ header {
 }
 
 .event-block-img:hover {
-    opacity: 100%;
+    opacity: 80%;
+    transform: scale(1.18);
 }
 
 .event-block h1 {
