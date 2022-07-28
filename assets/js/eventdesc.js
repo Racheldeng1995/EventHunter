@@ -1,13 +1,10 @@
 var APIToken = "ZK55TMREDURZKUJDZZ64"
-var googleMapAPI = "AIzaSyBuMQJedJWyxzXaIQkMRnuwXzh-W75MyWU"
 var likeBtn = document.getElementById("like-btn")
 var backBtn = document.getElementById("back-btn")
 var backBtnText = document.getElementById("back-btn-text")
 
 
 // Grab evrnt id from url query string
-// !!! Dependency on href link from Event Main Page. href should be ./index.html?event=" + eventid
-
 var getEventId = function() {
 
     var queryString = document.location.search;
@@ -47,11 +44,8 @@ genHeader();
 
 var eventId = getEventId()
 
-// For test purpose
-//var eventId = "164264538657"
 
 // Get event symmary from API, public fields
-// Replace eventId by eventId
 var getEventDetails = function() {
     
     var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + eventId   + "/?token=" + APIToken
@@ -105,7 +99,6 @@ var getLocationGeo = function() {
                 "lat": data.latitude,
                 "lon": data.longitude
             }
-            console.log(eventLocation)
 
             return eventLocation
         })
@@ -133,7 +126,6 @@ var getTicketPrice = function() {
           }
     })
     .then(function(data) {
-        console.log(data)
 
         var ticketArray = data.ticket_classes
 
@@ -161,7 +153,6 @@ var getTicketPrice = function() {
         "price" : ticketDetailsArray
        }
 
-       console.log(priceDetails)
        return priceDetails
     })
     .catch(function(error) {
@@ -184,7 +175,6 @@ var getFullDesc = function() {
           }
     })
     .then(function(data) {
-        console.log(data)
         var eventFullDesc = {
             "fulldesc": data.modules[0].data.body.text.replace("<p>", "").replace("</p>", "")
         }
@@ -210,7 +200,6 @@ var comDetails = function () {
                 .then(function(priceDetails) {
 
                 var eventDetailsArray = Object.assign(eventDetails,eventLocation,eventFullDesc,priceDetails)
-                console.log(eventDetailsArray)
                 return eventDetailsArray
             })
             }
@@ -225,7 +214,6 @@ genPage = function () {
 
     return comDetails()
     .then(function(eventDetailsArray) {
-        console.log(eventDetailsArray)
         var eventSummary = document.createElement("section")
         eventSummary.className = "event-summary"
 
@@ -393,8 +381,6 @@ likeBtn.addEventListener("click", function(event){
 )
 
 // Add event listener on Back Button
-// !!! Dependency on local storage of Event Main Page
-// !!! Pay attention that not directly link back to Event Main Page, need to link back to "selected"/"already loaded" Event Main Page
 backBtn.addEventListener("click", function(event) {
 
     event.preventDefault();
