@@ -14,7 +14,7 @@ The application helps users browse the upcoming food & drink events in the city 
 * When users resize the page or view the site on various screens and devices, they are presented with a responsive layout that adapts to my viewport.
 
 ## Application Deployment
-* Live URL:
+* Live URL: https://racheldeng1995.github.io/EventHunter/
 * Screenshot:
 
 
