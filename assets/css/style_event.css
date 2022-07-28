@@ -114,6 +114,8 @@ header {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--secondary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* START DESCRIPTION PAGE */
@@ -218,6 +220,18 @@ header {
     border-radius: 15px;
 }
 
+.map {
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin: 40px 100px 0px 100px;
+    border-radius: 15px;
+}
+
+/* END DESCRIPTION PAGE */
+
 /* START MAIN PAGE*/
 .event-main-saved {
     height: 100%;
@@ -272,13 +286,4 @@ header {
 
 /* END MAIN PAGE*/
 
-.map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 69%;
-    /* The width is the width of the web page */
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--secondary-color);
-    padding: 10px;
-  }
+
