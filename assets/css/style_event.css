@@ -15,6 +15,8 @@ body, html {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
@@ -67,7 +69,8 @@ header {
     padding: 15px 20px 10px 30px;
     width: 60%;
     color: var(--primary-color);
-    margin: 0
+    margin: 0;
+    font-size: 1.4em;
 }
 
 .events-you-liked a {
@@ -202,7 +205,11 @@ header {
     border-radius: 15px;
 }
 
+/* START MAIN PAGE*/
 .event-main-saved {
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 70%;
     display: flex;
     flex-wrap: wrap;
@@ -214,16 +221,23 @@ header {
 
 .event-block {
     text-align: center;
-    margin: 20px; 
+    margin: 50px 10px 50px 10px;
+    padding: 10px;
     width: 45%;
     background-color: var(--fifth-color);
     border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .event-block-img {
     opacity: 70%;
     border-radius: 15px;
-    width: 80%;
+    padding: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .event-block-img:hover {
@@ -233,6 +247,8 @@ header {
 .event-block h1 {
     color: var(--primary-color);
 }
+
+/* END MAIN PAGE*/
 
 .map {
     height: 400px;

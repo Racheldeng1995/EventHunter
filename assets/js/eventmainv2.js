@@ -210,7 +210,7 @@ var geneventSumArray = function(eventId) {
     .then(function(eventSumArray) {
     var eventBlock = document.createElement ("section")
     eventBlock.className = "event-block"
-    var eventTitle = document.createElement("h1")
+    var eventTitle = document.createElement("h3")
     eventTitle.innerHTML = eventSumArray.title
 
     var eventImg = document.createElement("a")
