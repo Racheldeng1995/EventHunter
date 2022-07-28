@@ -137,7 +137,7 @@ header {
 
 .event-details-main {
     border-radius: 15px;
-    width: 50%;
+    width: 90%;
     padding: 10px 40px;
     background-color: var(--fifth-color);
     margin-left: auto;
@@ -297,6 +297,13 @@ header {
     .event-main-saved {
         width: 100%;
     }
+
+    .event-main {
+        width: 90%;
+    }
+
+    .event-details-main {
+        width: 80%;
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
