@@ -146,7 +146,59 @@ margin-bottom: 5px;
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    } 
     
+    .footer-distributed .footer-center{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-distributed .footer-right{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+    .footer-distributed .footer-company-about{
+        text-align: center;
+    }
 }
 
+/* MEDIA QUERY FOR MOBILE AND SMALLER */
+@media screen and (max-width: 412px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    } 
+    
+    .footer-distributed .footer-center{
+        width: 100%;
+    }
+
+    .footer-distributed .footer-right{
+        width: 100%;
+    }
+        
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color: var(--tertiary-color);
+        font-size: 10px;
+        font-weight: normal;
+        text-align: center;
+    }
+}
 /*end  footer*/
