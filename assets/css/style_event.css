@@ -305,7 +305,7 @@ header {
     .event-details-main {
         width: 80%;
 }
-
+}
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
     .application-action-event-main {
