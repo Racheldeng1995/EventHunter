@@ -16,6 +16,8 @@ The application helps users browse the upcoming food & drink events in the city 
 ## Application Deployment
 * Live URL: https://racheldeng1995.github.io/EventHunter/
 * Screenshot:
+![image](https://user-images.githubusercontent.com/48065400/181600982-d937f11d-e9e0-416d-b0ee-4aa4970b924c.png)
+
 
 
 
