@@ -3,6 +3,7 @@ var APIToken = "ZK55TMREDURZKUJDZZ64"
 
 var backBtn = document.getElementById("back-btn")
 
+// Due to the Eventbrite search API are deprecated, we create this event array as 'temparary database' for MVP demo.
 var eventSumList = [
     {
         eventid: "335539506697",
@@ -66,25 +67,25 @@ var eventSumList = [
     }
 ]
 
+// Get the city names and timerange from URL
 var getSearchPara = function () {
 
     var queryString = document.location.search;
-    console.log(queryString)
     var cityName = queryString.split("=")[1].split("&")[0].replace("%20", " ");
-    console.log(cityName)
     var timeRange = queryString.split("=")[2].replace("_", " ")
-    console.log(timeRange)
       
     return [cityName,timeRange]
 }
 
+// Filter the event array based on the city and timerange that the user selected/input
 var disArray = eventSumList.filter(function(obj) {
     var paraLi = getSearchPara()
-    return obj.timerange == paraLi[1] && obj.city == paraLi[0]; //hard code
+    return obj.timerange == paraLi[1] && obj.city == paraLi[0];
 
 });
 
 
+// Call API by eventId to get the summary of event(title, location, time and pic)
 var getEventSum = function (eventId) {
     var eventApiUrl = "https://www.eventbriteapi.com/v3/events/" + eventId   + "/?token=" + APIToken
 
@@ -112,6 +113,7 @@ var getEventSum = function (eventId) {
       });
 }
 
+// Call API to get the exact address of the event, can't get exact address from previous API call since it only returns venue_id(number)
 var getAddress = function(eventId) {
 
     return getEventSum(eventId)
@@ -131,7 +133,6 @@ var getAddress = function(eventId) {
             var eventLocation = {
                 "address": data.address.localized_address_display,
             }
-            console.log(eventLocation)
 
             return eventLocation
         })
@@ -143,7 +144,7 @@ var getAddress = function(eventId) {
     )
 }
 
-// Combine event details in single array
+// Combine event summary in single array
 var comSum = function (eventId) {
 
     return getEventSum(eventId)
@@ -152,7 +153,6 @@ var comSum = function (eventId) {
         .then(function(eventLocation) {
 
                 var eventSumArray = Object.assign(eventDetails,eventLocation)
-                console.log(eventSumArray)
                 return eventSumArray
             })
             }
@@ -160,6 +160,7 @@ var comSum = function (eventId) {
 }
 
 
+// Get saved event list from local storage
 var savedItems = JSON.parse(localStorage.getItem("savedlist"))
 
 if (savedItems == null) {
@@ -184,7 +185,7 @@ genEventsNum()
 
 var eventsTimeRange = document.getElementById("events-time")
 
-// Automatically display current number of events you liked
+// Automatically display the timerange of events you selected
 var genEventsTimeRange = function () {
 
     eventsTimeRange.innerHTML = "Time Range: " + disArray[0]["timerange"]
@@ -194,7 +195,7 @@ genEventsTimeRange()
 
 var eventsCity = document.getElementById("events-location")
 
-// Automatically display current number of events you liked
+// Automatically display the city of events you input
 var genEventsCity = function () {
 
     eventsCity.innerHTML = "City: " + disArray[0]["city"]
@@ -203,7 +204,7 @@ var genEventsCity = function () {
 genEventsCity()
 
 
-// Generate and display saved events list
+// Generate and display events list based on your input
 var geneventSumArray = function(eventId) {
 
     return comSum(eventId)
@@ -235,17 +236,17 @@ var geneventSumArray = function(eventId) {
     )
 }
 
-// Loop though all the items from array on local storage
+// Loop through all the items in the filtered event array 
 var eventSavedMain = document.getElementById("event-main")
 for (i=0; i < disArray.length; i++) {
     (function(i) {
-        console.log(disArray[i]['eventid'])
         geneventSumArray(disArray[i]['eventid'])
         
     }(i)
     )
 }
 
+// Add event listener on Back button to direct to the previous page.
 backBtn.addEventListener("click", function(event) {
 
     event.preventDefault();

@@ -1,3 +1,4 @@
+// Get saved event list from local storage
 var savedItems = JSON.parse(localStorage.getItem("savedlist"))
 
 if (savedItems == null) {
@@ -49,7 +50,6 @@ var eventSavedMain = document.getElementById("event-main")
 if (savedItems != null) { 
     for (i=0; i < savedItems.length; i++) {
         (function(i) {
-            console.log(savedItems[i])
             genEventList(savedItems[i])
             
         }(i)
@@ -59,6 +59,7 @@ if (savedItems != null) {
 
 var backBtn = document.getElementById("back-btn")
 
+// Add event listener on Back button to direct to the previous page.
 backBtn.addEventListener("click", function(event) {
 
     event.preventDefault();
