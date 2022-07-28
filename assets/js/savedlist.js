@@ -21,7 +21,7 @@ genEventsNum()
 var genEventList = function(eventlist) {
     var eventBlock = document.createElement ("section")
     eventBlock.className = "event-block"
-    var eventTitle = document.createElement("h1")
+    var eventTitle = document.createElement("h3")
     eventTitle.innerHTML = eventlist.title
 
     var eventImg = document.createElement("a")
