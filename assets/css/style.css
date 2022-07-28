@@ -20,11 +20,11 @@ body, html {
     padding: 0;
 }
 
-.content {
+/* .content {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
+} */
 
 header {
     border-bottom: 3px solid var(--fourth-color);
@@ -109,29 +109,29 @@ form button {
     color: var(--fifth-color);
 }
 
-/* footer {
-    background-color: var(--fourth-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px 10px 30px;
+#search-form{
+   margin-bottom: 15%;
+   width: 70%;
+   height: 600px;
 }
 
-footer a {
-    text-decoration: none;
-    color: var(--tertiary-color);
-} */
 
+
+
+.section-teamform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+}
 .teamForm {
     background-color: var(--secondary-color);
-    height: 100%;
-    display: block;
+   
+    
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+  
+    
 }
 
 .teamForm div {
@@ -143,13 +143,33 @@ footer a {
     padding: 10px 200px 10px 200px;
     margin: 50px 150px 10px 150px;
     border-radius: 15px;
+    
+}
+.member{width: auto;}
+@media only screen and (max-width:840px){
+    .section-teamform{
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .teamForm{
+        width: 90%;
+    }
+    .teamForm h2 {
+        margin: 0px;
+        font-size: 1.5rem;
+    }
+    .memberImage{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .memberImage {
     display: flex;
-    flex-direction: row;
+    
     justify-content: center;
-    margin: 10px 150px 10px 150px;
+
+
 }
 
 .member {

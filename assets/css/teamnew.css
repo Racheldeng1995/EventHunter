@@ -1,3 +1,105 @@
+
+
+:root {
+    --primary-color: rgb(240, 127, 48);
+    --secondary-color: rgb(255, 248, 239);
+    --tertiary-color: rgb(119, 119, 121);
+    --fourth-color: rgb(245, 245, 245);
+    --fifth-color: white;
+    --sixth-color: rgb(217, 217, 217);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header h1{
+    padding: 15px 20px 10px 30px;
+    color:var(--primary-color);
+    border-bottom: 3px solid var(--fourth-color);
+}
+.section-teamform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 95px;
+   
+}
+
+.teamForm{background-color: var(--secondary-color);
+    padding: 20px;
+    
+
+border-radius: 25px;}
+body{
+    height: 100%;
+}
+
+.teamForm h2{
+    background-color: var(--fifth-color);
+    border-radius: 15px;
+    text-align: center;
+  color: #F07F30;
+    width: 55%;
+    margin: auto;
+    padding:15px ;
+font-size: 1.8rem;
+margin-top: 35px;
+}
+.memberImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    
+    
+}
+.member{
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    margin-right: 1%;
+}
+.member img{
+    width: 45%;
+    
+
+}
+.member h3 {
+  color: black;
+   background-color: var(--fifth-color);
+border-radius: 15px;
+padding: 10px;}
+
+.member p{
+    color: black;
+    background-color: var(--fifth-color);
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width:840px){
+    .memberImage{
+        flex-direction: column;
+        
+    }
+    .member{
+        width: 80%;
+    }
+
+}
+
 /* START FOOTER*/
 footer {
     background-color: var(--fourth-color);
@@ -137,18 +239,6 @@ margin-bottom: 5px;
     margin-left: 0;
 }
 
-}
-@media only screen and  (max-width: 850px){
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right{
-        display: block;
-        width: 100%;
-    padding: 5%;
-        text-align: center;
-        justify-content: center;
-    }
 }
   
 /*end  footer*/

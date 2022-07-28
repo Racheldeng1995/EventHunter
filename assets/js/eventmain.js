@@ -3,12 +3,21 @@ var APIToken = "ZK55TMREDURZKUJDZZ64"
 
 var backBtn = document.getElementById("back-btn")
 
+
+
 // Due to the Eventbrite search API are deprecated, we create this event array as 'temparary database' for MVP demo.
 var eventSumList = [
     {
-        eventid: "335539506697",
+        eventid: "383827467287", 
         timerange: "1 Week",
         city: "Los Angeles"
+        
+    },
+    {
+        eventid: "335539506697", 
+        timerange: "1 Week",
+        city: "Los Angeles"
+        
     },
     {
         eventid: "345788401417",
@@ -16,7 +25,7 @@ var eventSumList = [
         city: "Los Angeles"
     },
     {
-        eventid: "164264538657",
+        eventid: "164264538657", 
         timerange: "1 Day",
         city: "Los Angeles"
     },
@@ -26,17 +35,17 @@ var eventSumList = [
         city: "Los Angeles"
     },
     {
-        eventid: "345885140767",
+        eventid: "345885140767", 
         timerange: "1 Month",
         city: "Los Angeles"
     },
     {
-        eventid: "273338461697",
+        eventid: "273338461697", 
         timerange: "1 Week",
         city: "Los Angeles"
     },
     {
-        eventid: "158477547611",
+        eventid: "158477547611", 
         timerange: "1 Day",
         city: "New York"
     },
